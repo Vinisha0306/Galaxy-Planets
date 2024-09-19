@@ -1,29 +1,23 @@
+import 'dart:convert';
+import 'dart:math';
 import 'package:flutter/material.dart';
-import 'package:galaxy_planets/controller/planet_controller.dart';
-import 'package:galaxy_planets/pages/splash_screen.dart';
-import 'package:provider/provider.dart';
+import 'package:flutter/services.dart';
+import 'package:galaxy_planets/pages/homePage.dart';
 
 void main() {
-  runApp(
-    MultiProvider(
-      providers: [
-        ChangeNotifierProvider(
-          create: (context) => PlanetController(),
-        )
-      ],
-      child: MyApp(),
-    ),
-  );
+  runApp(PlanetApp());
 }
 
-class MyApp extends StatelessWidget {
-  const MyApp({super.key});
-
+class PlanetApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      home: SplashScreen(),
+      title: 'Planet App',
+      theme: ThemeData(
+        primarySwatch: Colors.blue,
+      ),
+      home: PlanetCustomRotation(),
     );
   }
 }
