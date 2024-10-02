@@ -1,8 +1,5 @@
-import 'dart:convert';
-import 'dart:math';
 import 'package:flutter/material.dart';
-import 'package:flutter/services.dart';
-import 'package:galaxy_planets/pages/homePage.dart';
+import 'package:galaxy_planets/pages/splashScreen.dart';
 
 void main() {
   runApp(PlanetApp());
@@ -17,7 +14,7 @@ class PlanetApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
-      home: PlanetCustomRotation(),
+      home: SplashScreen(),
     );
   }
 }

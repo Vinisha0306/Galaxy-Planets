@@ -50,6 +50,16 @@ class _PlanetCustomRotationState extends State<PlanetCustomRotation>
             backgroundColor: Colors.black,
             body: Stack(
               children: [
+                Container(
+                  decoration: const BoxDecoration(
+                    image: DecorationImage(
+                      image: AssetImage(
+                        'assets/images/bg.jpg',
+                      ),
+                      fit: BoxFit.cover,
+                    ),
+                  ),
+                ),
                 const Align(
                   alignment: Alignment(0, -0.9),
                   child: Text(
